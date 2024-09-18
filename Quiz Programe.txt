@@ -1,0 +1,45 @@
+
+//Quiz Program
+
+import java.util.Scanner;
+
+public class QuizProgram {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Quiz questions and answers
+        String[] questions = {
+            "What is the capital of France?",
+            "Who is the CEO of Tesla?",
+            "What is the largest planet in our solar system?"
+        };
+
+        String[] answers = {
+            "Paris",
+            "Elon Musk",
+            "Jupiter"
+        };
+
+        int score = 0;
+
+        // Ask each question
+        for (int i = 0; i < questions.length; i++) {
+            System.out.println("Question " + (i + 1) + ": " + questions[i]);
+            System.out.print("\nYour answer: ");
+            String userAnswer = scanner.nextLine();
+
+            // Check answer
+            if (userAnswer.equalsIgnoreCase(answers[i])) {
+                System.out.println("\nCorrect!");
+                score++;
+            } else {
+                System.out.println("\nIncorrect. The correct answer is " + answers[i]);
+            }
+        }
+
+        // Display final score
+        System.out.println("\nQuiz complete! Your final score is " + score + "/" + questions.length);
+    }
+}
+
+//Thank You...
