@@ -22,3 +22,23 @@ public class TestCalender{
         System.out.println("AM_PM:\t"+cal.get(Calendar.AM_PM));
     }
 }
+
+//Output
+
+// Current time is:Mon Sep 23 18:31:29 IST 2024
+// Year:   2024
+// Month:  8
+// Date:   23
+// Hour:   6
+// Hour of day:    18
+// Minute: 31
+// Second: 29
+// Day of week:    2
+// Day of month:   23
+// Day of year:267
+// Week of month:  4
+// Week of year:   39
+// AM:     1
+// PM:     2024
+// AM_PM:  1
+
