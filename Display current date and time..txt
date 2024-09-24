@@ -1,0 +1,24 @@
+//Display current date and time.
+
+import java.util.*;
+public class TestCalender{
+    public static void main(String[] args) {
+        Calendar cal = new GregorianCalendar();  
+        System.out.println("\nCurrent time is:"+new Date());
+        System.out.println("Year:\t"+cal.get(Calendar.YEAR));
+        System.out.println("Month:\t"+cal.get(Calendar.MONTH));
+        System.out.println("Date:\t"+cal.get(Calendar.DATE));
+        System.out.println("Hour:\t"+cal.get(Calendar.HOUR));
+        System.out.println("Hour of day:\t"+cal.get(Calendar.HOUR_OF_DAY));
+        System.out.println("Minute:\t"+cal.get(Calendar.MINUTE));
+        System.out.println("Second:\t"+cal.get(Calendar.SECOND));
+        System.out.println("Day of week:\t"+cal.get(Calendar.DAY_OF_WEEK));
+        System.out.println("Day of month:\t"+cal.get(Calendar.DAY_OF_MONTH));
+        System.out.println("Day of year:"+cal.get(Calendar.DAY_OF_YEAR));
+        System.out.println("Week of month:\t"+cal.get(Calendar.WEEK_OF_MONTH));
+        System.out.println("Week of year:\t"+cal.get(Calendar.WEEK_OF_YEAR));
+        System.out.println("AM:\t"+cal.get(Calendar.AM));
+        System.out.println("PM:\t"+cal.get(Calendar.PM));
+        System.out.println("AM_PM:\t"+cal.get(Calendar.AM_PM));
+    }
+}
