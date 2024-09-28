@@ -1,0 +1,73 @@
+//ROCK-PAPER-SCISSOR
+
+import java.util.Random;//Random keyword for generating randome numbers(Computer Choice)
+import java.util.*;
+
+public class RockPaperScissorgame {
+    public static void main(String[] args) {
+        try (Scanner scanner = new Scanner(System.in)) {   //try keyword for exception handling
+            Random random = new Random();
+            System.out.println("\n***ROCK-PAPER-SCISSOR***");
+            System.out.println("\nEnter Rock, Paper, or Scissors:");
+            String userChoice = scanner.nextLine();
+
+            String[] choices = {"Rock", "Paper", "Scissors"};//String type arr whos name is choice
+            String computerChoice = choices[random.nextInt(3)];
+
+            System.out.println("Computer chose: " + computerChoice);
+
+            if (userChoice.equals(computerChoice)) {
+                System.out.println("It's a tie!");
+            } else if ((userChoice.equals("Rock") && computerChoice.equals("Scissors")) ||
+                       (userChoice.equals("Paper") && computerChoice.equals("Rock")) ||
+                       (userChoice.equals("Scissors") && computerChoice.equals("Paper"))) {
+                System.out.println("You win!");
+            } else {
+                System.out.println("Computer wins!");
+    }
+        }
+    }
+}
+
+//Output
+***ROCK-PAPER-SCISSOR***
+
+// Enter Rock, Paper, or Scissors:
+// Rock
+// Computer chose: Paper
+// Computer wins!
+
+// ***ROCK-PAPER-SCISSOR***
+
+// Enter Rock, Paper, or Scissors:
+// Paper
+// Computer chose: Paper
+// It's a tie!
+
+// ***ROCK-PAPER-SCISSOR***
+
+// Enter Rock, Paper, or Scissors:
+// Rock
+// Computer chose: Rock
+// It's a tie!
+
+// ***ROCK-PAPER-SCISSOR***
+
+// Enter Rock, Paper, or Scissors:
+// Scissor
+// Computer chose: Paper
+// Computer wins!
+
+// ***ROCK-PAPER-SCISSOR***
+
+// Enter Rock, Paper, or Scissors:
+// Scissor
+// Computer chose: Paper
+// Computer wins!
+
+// ***ROCK-PAPER-SCISSOR***
+
+// Enter Rock, Paper, or Scissors:
+// Rock
+// Computer chose: Scissors
+// You win!
