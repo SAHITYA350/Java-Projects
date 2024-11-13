@@ -1,0 +1,52 @@
+/Press button and background colour changed
+
+import java.awt.*;
+import java.awt.event.*;
+
+class Test implements ActionListener {
+    private Frame f;
+    private Button b1, b2;
+    private Panel p;
+
+
+    Test() {
+        f = new Frame("My coloure:");
+        p = new Panel();
+        b1 = new Button("Red");
+        b2 = new Button("Blue");
+        f.add(p);
+        p.add(b1);
+        p.add(b2);
+        b1.setBackground(Color.red);
+        b2.setBackground(Color.blue);
+        b1.addActionListener(this);
+        b2.addActionListener(this);
+        f.setBackground(Color.black);
+        f.setSize(400, 400);
+        f.setVisible(true);
+    }
+
+    public void actionPerformed(ActionEvent e) {
+        Color color = null;
+
+        if (e.getSource() == b1) {
+            color = Color.RED;
+            System.out.println("Red working.");
+        } else if (e.getSource() == b2) {
+            color = Color.BLUE;
+            System.out.println("Blue working.");
+        }
+
+        if (color != null) {
+            f.setBackground(color);
+            p.setBackground(color);
+        }
+    }
+
+    public static void main(String[] args) {
+       Test t1= new Test();
+    }
+}
+
+
+
